@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Test.Application.TodoList.Dto.TodoTaskServiceDto>
+
+@{
+    ViewData["Title"] = "Home Page";
+    int rowNumber = 1;
+}
+
+<div class="text-center">
+    <h1 class="display-4">TODO list</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Task Name</th>
+                <th>Task Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var todoTask in Model)
+            {
+                <tr>
+                    <td>@rowNumber</td>
+                    <td>@todoTask.Title</td>
+                    <td>@todoTask.Description</td>
+                </tr>
+
+                rowNumber++;
+            }
+        </tbody>
+    </table>
+</div>
