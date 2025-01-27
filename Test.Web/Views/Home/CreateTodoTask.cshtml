@@ -8,7 +8,7 @@
 <h1>CreateTodoTask</h1>
 
 
-<form action="/Home/CreateTodoTask" method="post">
+<form asp-controller="Home" asp-action="CreateTodoTask" method="post">
     <div class="form-group mb-3">
         <label class="control-label" asp-for="Title">Title</label>
         <input class="form-control" type="text" asp-for="Title" />
